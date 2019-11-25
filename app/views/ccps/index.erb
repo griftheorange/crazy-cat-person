@@ -1,0 +1,7 @@
+<h1>All our Crazy Cat People!</h1>
+<% @ccps.each do |ccp|%>
+    <%=link_to ccp.name, ccp%>
+    <br>
+<% end%>
+<br>
+<%=link_to "Create New Crazy Person", new_ccp_path%>

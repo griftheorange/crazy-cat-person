@@ -1,0 +1,9 @@
+<h1>Create New Crazy Person</h1>
+<%= link_to "Home Page", ccps_path %>
+<br><br>
+<%= form_for @ccp do |f| %>
+    <%= f.label :name, name="Person's Name: "%>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.submit "Create New Person!" %>
+<% end %>

@@ -1,0 +1,15 @@
+<h1>A Crazy Cat Person Page!</h1>
+<h2><%= @ccp.name %></h2>
+<% @ccp.cats.each do |cat|%>
+    <p>
+       <strong> Name: </strong>
+        <%= link_to cat.name, cat %>
+        <br>
+        <strong>Breed: </strong>
+        <%= cat.breed %>
+    </p>
+<% end%>
+<%= form_tag new_cat_path, method: "GET" do%>
+<input type="hidden" name="ccp" value=<%= @ccp.id %>>
+<%=  submit_tag "Create new Cat for this Crazy mofo" %>
+<% end%>

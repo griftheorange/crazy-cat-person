@@ -1,0 +1,13 @@
+<h1>Make a new Cat for <%= @ccp.name %></h1>
+<%= link_to "Home Page", ccps_path %>
+<br><br>
+<%= form_for @cat do |f| %>
+    <input type="hidden" name="ccp" value=<%= @ccp.id %>>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :breed %>
+    <%= f.text_field :breed %>
+    <br>
+    <%= f.submit "Make new cat for #{@ccp.name}" %>
+<% end%>
